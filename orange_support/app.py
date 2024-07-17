@@ -25,7 +25,7 @@ class OrangeApp:
 
     def run(self, func, in_data):
         df = self.to_df(in_data)
-        df_out = f(df)
+        df_out = func(df)
         out = self.from_df(df_out)
         return out
 
@@ -34,4 +34,4 @@ def create_app():
     app = OrangeApp()
     return app
 
-
+app  = create_app()
