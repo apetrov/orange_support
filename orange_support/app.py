@@ -2,6 +2,9 @@ from Orange.data.pandas_compat import table_to_frame, table_from_frame
 import pandas as pd
 import numpy as np
 import pymc as pm
+import arviz as az
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def find_contraint_beta_prior(lower, upper, mass=0.95):
     assert lower > 0 and lower < upper, "lower bound should be between 0 and upper"
